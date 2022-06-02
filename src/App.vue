@@ -3,7 +3,7 @@
     <h1>インターンのための掲示板</h1>
     名前
     <div><input type="text" v-model="name"></div>
-    コメント
+    投稿
     <div><textarea v-model="comment"></textarea></div>
     <br>
     <button @click="submitPosts">投稿する</button>
@@ -12,14 +12,14 @@
     <div v-for="post in posts" :key="post.name">
       <hr>
       <p>名前 : {{post.fields.name.stringValue}}</p>
-      <p>コメント : {{post.fields.comment.stringValue}}</p>
+      <p>投稿 : {{post.fields.comment.stringValue}}</p>
     </div>
   </div>
 </template>
 <style>
   #app{
     text-align: center;
-    background-color:red;
+    background-color: white;
     font-family: HiraMinProN-W6;
   }
 </style>
