@@ -9,13 +9,13 @@ app.use('/js', express.static(__dirname + '/dist/js/'));
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: 'hs20100531',
+  password: '*******',
   database: 'bulletin_app'
 });
 
 app.get('/', (req, res) => {
   connection.query('SELECT * FROM users', (error, results) => {
-    res.sendFile(__dirname + '/dist/index.html');
+    console.log(results);
   });
 });
 
